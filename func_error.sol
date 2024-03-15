@@ -7,18 +7,18 @@ contract Error {
         // - inputs
         // - conditions before execution
         // - return values from calls to other functions
-        require(_i > 10, "Input must be greater than 10");
+        require(_i > 20, "Input must be greater than 20");
     }
 
     function testRevert(uint _i) public pure {
         // Revert is useful when the condition to check is complex.
         // This code does the exact same thing as the example above
-        if (_i <= 10) {
-            revert("Input must be greater than 10");
+        if (_i <= 15) {
+            revert("Input must be greater than 15");
         }
     }
 
-    uint public num=0;
+    uint public num=9;
 
     function testAssert() public view {
         // Assert should only be used to test for internal errors,
@@ -26,7 +26,7 @@ contract Error {
 
         // Here we assert that num is always equal to 0
         // since it is impossible to update the value of num
-        assert(num == 0);
+        assert(num == 9);
     }
 
     // custom error
