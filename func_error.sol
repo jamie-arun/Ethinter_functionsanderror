@@ -24,7 +24,7 @@ contract Error {
         // Assert should only be used to test for internal errors,
         // and to check invariants.
 
-        // Here we assert that num is always equal to 0
+        // Here we assert that num is always equal to 9
         // since it is impossible to update the value of num
         assert(num == 9);
     }
